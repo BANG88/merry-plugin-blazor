@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using {{ns}}.BaseComponent;
+using {{ns}}BaseComponent;
 
 namespace {{fullNamespace}}
 {

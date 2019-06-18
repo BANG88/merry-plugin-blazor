@@ -9,19 +9,23 @@ export interface BlazorAnswers {
 export default (api: Plugin) => {
   api.command('blazor [name]').action(async (name: string) => {
     // define your own questions or remove it if you don't need it
-    const answers = await api.prompt<BlazorAnswers>([
-      {
-        name: 'name',
-        message: 'Your lib?',
-        validate: blazorName => {
-          if (!blazorName) {
-            return 'blazor name are required'
-          }
-          return true
-        },
-        default: name,
-      },
-    ])
+    const answers = name
+      ? {
+          name,
+        }
+      : await api.prompt<BlazorAnswers>([
+          {
+            name: 'name',
+            message: 'Your lib?',
+            validate: blazorName => {
+              if (!blazorName) {
+                return 'blazor name are required'
+              }
+              return true
+            },
+            default: name,
+          },
+        ])
     const ns = 'AntDesign.'
     const prefix = 'Ant'
     const componentName = await api.compile(
@@ -35,7 +39,7 @@ export default (api: Plugin) => {
       componentName,
       ns,
       prefix,
-      fullCsproj: fullNamespace,
+      fullNamespace,
     }
 
     const proj = path.join(api.conf.dist, fullNamespace)
