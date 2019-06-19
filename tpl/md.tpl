@@ -1,11 +1,11 @@
-# {{fullCsproj}}
+# {{fullNamespace}}
 
 > [https://ant.design/components/{{lowercase name}}/](https://ant.design/components/{{lowercase name}}/)
 
 ## Usage
 
 ```cs
-@using {{fullCsproj}}
+@using {{fullNamespace}}
 ```
 
 ```razor
