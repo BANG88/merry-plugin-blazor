@@ -10,7 +10,7 @@
 ### Install
 
 ```sh
-dotnet add package {{properCase prefix}}{{properCase name}}
+dotnet add package {{ns}}.{{properCase name}}
 ```
 
 ```cs
