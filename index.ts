@@ -26,13 +26,13 @@ export default (api: Plugin) => {
             default: name,
           },
         ])
-    const ns = 'AntDesign.'
+    const ns = 'AntDesign'
     const prefix = 'Ant'
     const componentName = await api.compile(
       `${prefix}{{properCase name}}Component`,
       answers
     )
-    const fullNamespace = await api.compile(`${ns}{{properCase name}}`, answers)
+    const fullNamespace = await api.compile(`${ns}.{{properCase name}}`, answers)
 
     const data = {
       ...answers,

@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using {{ns}}BaseComponent;
 using Microsoft.AspNetCore.Components;
 
-namespace {{fullNamespace}}
+namespace {{ns}}
 {
     /// <summary>
     /// Base Component for {{properCase prefix}}{{properCase name}}
