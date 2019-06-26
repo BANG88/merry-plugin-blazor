@@ -5,13 +5,14 @@
 
 > [https://ant.design/components/{{lowercase name}}/](https://ant.design/components/{{lowercase name}}/)
 
-## Usage
 
-### Install
+## Install
 
 ```sh
 dotnet add package {{ns}}.{{properCase name}}
 ```
+
+### Usage
 
 ```cs
 @using {{ns}}
