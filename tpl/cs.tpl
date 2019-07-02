@@ -11,7 +11,7 @@ namespace {{ns}}
     /// </summary>
     public class {{componentName}} : AntBaseComponent
     {
-        private string prefixCls = getPrefixCls("{{lowercase name}}");
+        protected string prefixCls = getPrefixCls("{{lowercase name}}");
         protected override Task OnParametersSetAsync()
         {
             ClassNames.Clear()
