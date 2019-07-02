@@ -1,8 +1,5 @@
 @namespace {{ns}}
 @inherits {{componentName}}
+<div class="@Class" style="@style">
 
-<h3>{{properCase prefix}}{{properCase name}}</h3>
-
-@code {
-
-}
+</div>
